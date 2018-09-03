@@ -1,0 +1,36 @@
+[ignore]
+./nuxt/*
+<PROJECT_ROOT>/node_modules/.*config-chain/test/broken.json
+
+[include]
+<PROJECT_ROOT>/client
+<PROJECT_ROOT>/
+
+[libs]
+./node_modules/@vue-flow-typed/vuex/definitions
+./node_modules/@vue-flow-typed/vue-router/definitions
+
+[lints]
+all=warn
+unclear-type=error
+untyped-import=off
+untyped-type-import=error
+unsafe-getters-setters=off
+sketchy-null=error
+
+[options]
+include_warnings=true
+esproposal.decorators=ignore
+module.name_mapper='@src' ->'<PROJECT_ROOT>/src'
+module.name_mapper='@router' ->'<PROJECT_ROOT>/src/router'
+module.name_mapper='@views' ->'<PROJECT_ROOT>/src/views'
+module.name_mapper='@layouts' ->'<PROJECT_ROOT>/src/layouts'
+module.name_mapper='@components' ->'<PROJECT_ROOT>/src/components'
+module.name_mapper='@assets' ->'<PROJECT_ROOT>/src/assets'
+module.name_mapper='@utils' ->'<PROJECT_ROOT>/src/utils'
+module.name_mapper='@store' ->'<PROJECT_ROOT>/src/store'
+module.name_mapper='@sass' ->'<PROJECT_ROOT>/src/sass'
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=client
+module.file_ext=.vue
+module.file_ext=.jss
